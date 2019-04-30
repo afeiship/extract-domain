@@ -1,0 +1,186 @@
+[
+  {
+    "type": "element",
+    "tagName": "div",
+    "attributes": [{ "key": "class", "value": "wrapper" }],
+    "children": [
+      { "type": "text", "content": "\n  " },
+      { "type": "comment", "content": " wp:paragraph " },
+      { "type": "text", "content": "\n  " },
+      {
+        "type": "element",
+        "tagName": "p",
+        "attributes": [],
+        "children": [
+          {
+            "type": "text",
+            "content": "\n    4月29日消息，据央行官网，中国人民银行就发行2019年版第五套人民币50元、20元、10元、1元纸币及1元、5角、1角硬币事宜答记者问。\n  "
+          }
+        ]
+      },
+      { "type": "text", "content": "\n  " },
+      { "type": "comment", "content": " /wp:paragraph " },
+      { "type": "text", "content": "\n\n  " },
+      { "type": "comment", "content": " wp:paragraph " },
+      { "type": "text", "content": "\n  " },
+      {
+        "type": "element",
+        "tagName": "p",
+        "attributes": [],
+        "children": [
+          {
+            "type": "element",
+            "tagName": "strong",
+            "attributes": [],
+            "children": [{ "type": "text", "content": "以下是具体问答：" }]
+          }
+        ]
+      },
+      { "type": "text", "content": "\n  " },
+      { "type": "comment", "content": " /wp:paragraph " },
+      { "type": "text", "content": "\n\n  " },
+      { "type": "comment", "content": " wp:paragraph " },
+      { "type": "text", "content": "\n  " },
+      {
+        "type": "element",
+        "tagName": "p",
+        "attributes": [],
+        "children": [
+          {
+            "type": "text",
+            "content": "一、为什么要发行2019年版第五套人民币50元、20元、10元、1元纸币和1元、5角、1角硬币？"
+          }
+        ]
+      },
+      { "type": "text", "content": "\n  " },
+      { "type": "comment", "content": " /wp:paragraph " },
+      { "type": "text", "content": "\n\n  " },
+      {
+        "type": "comment",
+        "content": " wp:paragraph {\"textColor\":\"vivid-red\",\"backgroundColor\":\"luminous-vivid-orange\"} "
+      },
+      { "type": "text", "content": "\n  " },
+      {
+        "type": "element",
+        "tagName": "p",
+        "attributes": [
+          {
+            "key": "class",
+            "value": "has-text-color has-background has-vivid-red-color has-luminous-vivid-orange-background-color"
+          }
+        ],
+        "children": [
+          {
+            "type": "text",
+            "content": "\n    答：1999年10月，根据中华人民共和国国务院令第268号，中国人民银行发行了第五套人民币。2005年8月，为提升防伪技术和印制质量，中国人民银行发行了2005年版第五套人民币部分纸硬币。2015年11月，中国人民银行发行了新版100元纸币，其防伪能力和印制质量明显提升，受到社会广泛好评。迄今为止，50元、20元、10元、1元纸币和1元、5角、1角硬币已发行流通十多年。在此期间，现金流通情况发生巨大变化，现金自动处理设备快速发展，假币伪造形式多样化，货币防伪技术更新换代加快，这些都对人民币的设计水平、防伪技术和印制质量提出了更高要求。为适应人民币流通使用的发展变化，更好维护人民币信誉和持有人利益，提升人民币整体防伪能力，保持第五套人民币系列化，中国人民银行决定发行2019年版第五套人民币50元、20元、10元、1元纸币和1元、5角、1角硬币，在保持现行第五套人民币主图案等相关要素不变的前提下，对票（币）面效果、防伪特征及其布局等进行了调整，采用先进的防伪技术，提高防伪能力和印制质量，使公众和自助设备易于识别。\n  "
+          }
+        ]
+      },
+      { "type": "text", "content": "\n  " },
+      { "type": "comment", "content": " /wp:paragraph " },
+      { "type": "text", "content": "\n\n  " },
+      { "type": "comment", "content": " wp:paragraph " },
+      { "type": "text", "content": "\n  " },
+      {
+        "type": "element",
+        "tagName": "p",
+        "attributes": [],
+        "children": [
+          { "type": "text", "content": "\n    2019年版第五套人民币50元、" },
+          {
+            "type": "element",
+            "tagName": "span",
+            "attributes": [
+              { "key": "style", "value": "color:#0059FF" },
+              { "key": "class", "value": "tss-color" }
+            ],
+            "children": [{ "type": "text", "content": "20元、10" }]
+          },
+          { "type": "text", "content": "元、1" },
+          {
+            "type": "element",
+            "tagName": "span",
+            "attributes": [
+              { "key": "style", "value": "background-color:#87DBF7" },
+              { "key": "class", "value": "tss-background-color" }
+            ],
+            "children": [{ "type": "text", "content": "元纸币和1元" }]
+          },
+          { "type": "text", "content": "、5角、" },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "attributes": [{ "key": "class", "value": "tss-bold" }],
+            "children": [{ "type": "text", "content": "1角硬币发行后，" }]
+          },
+          { "type": "text", "content": "与同" },
+          {
+            "type": "element",
+            "tagName": "em",
+            "attributes": [{ "key": "class", "value": "tss-italic" }],
+            "children": [{ "type": "text", "content": "面额流通" }]
+          },
+          { "type": "text", "content": "人民币等值流通。\n  " }
+        ]
+      },
+      { "type": "text", "content": "\n  " },
+      { "type": "comment", "content": " /wp:paragraph " },
+      { "type": "text", "content": "\n\n  " },
+      {
+        "type": "comment",
+        "content": " wp:data/tu-block {\"tid\":\"3854\",\"dataJson\":\"eyJ0aWQiOiIzODU0IiwiaXNTdGF0aWMiOmZhbHNlfQ==\"} "
+      },
+      { "type": "text", "content": "\n  " },
+      {
+        "type": "element",
+        "tagName": "div",
+        "attributes": [{ "key": "class", "value": "wp-block-data-tu-block" }],
+        "children": [
+          { "type": "text", "content": "\n    " },
+          {
+            "type": "element",
+            "tagName": "tu-chart",
+            "attributes": [
+              { "key": "tid", "value": "3854" },
+              { "key": "data-json", "value": "eyJ0aWQiOiIzODU0IiwiaXNTdGF0aWMiOmZhbHNlfQ==" },
+              { "key": "data-is-static", "value": "false" }
+            ],
+            "children": []
+          },
+          { "type": "text", "content": "\n  " }
+        ]
+      },
+      { "type": "text", "content": "\n  " },
+      { "type": "comment", "content": " /wp:data/tu-block " },
+      { "type": "text", "content": "\n\n  " },
+      {
+        "type": "comment",
+        "content": " wp:data/tu-block {\"tid\":\"3855\",\"isStatic\":true,\"dataJson\":\"eyJ0aWQiOiIzODU1IiwiaXNTdGF0aWMiOnRydWV9\"} "
+      },
+      { "type": "text", "content": "\n  " },
+      {
+        "type": "element",
+        "tagName": "div",
+        "attributes": [{ "key": "class", "value": "wp-block-data-tu-block" }],
+        "children": [
+          { "type": "text", "content": "\n    " },
+          {
+            "type": "element",
+            "tagName": "tu-chart",
+            "attributes": [
+              { "key": "tid", "value": "3855" },
+              { "key": "data-json", "value": "eyJ0aWQiOiIzODU1IiwiaXNTdGF0aWMiOnRydWV9" },
+              { "key": "data-is-static", "value": "true" }
+            ],
+            "children": []
+          },
+          { "type": "text", "content": "\n  " }
+        ]
+      },
+      { "type": "text", "content": "\n  " },
+      { "type": "comment", "content": " /wp:data/tu-block " },
+      { "type": "text", "content": "\n" }
+    ]
+  },
+  { "type": "text", "content": "\n\n\n\n\n" }
+]
