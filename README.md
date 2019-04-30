@@ -29,3 +29,6 @@ nxTraverse(data,(index, value, children)=>{
   console.log(children);
 }, null, { itemsKey: 'children'});
 ```
+
+## todos
+- [ ] bug: deep
