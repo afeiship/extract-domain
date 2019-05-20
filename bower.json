@@ -1,7 +1,7 @@
 {
   "name": "next-traverse",
   "version": "0.0.1",
-  "description": "Traverse object which has items key",
+  "description": "Traverse object which has items key.",
   "main": "dist/next-traverse.js",
   "authors": [
     "afei"

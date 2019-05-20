@@ -1,5 +1,5 @@
 # next-traverse
-> Traverse object which has items key
+> Traverse object which has items key.
 
 ## install:
 ```bash
