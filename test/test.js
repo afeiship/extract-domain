@@ -8,9 +8,9 @@ test('nx.traverse', function() {
     function(index, value, target) {
       console.log(value, target.deep);
     },
-    null,
     {
-      itemsKey: 'children'
+      itemsKey: 'children',
+      context: null
     }
   );
 });

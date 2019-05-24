@@ -27,8 +27,5 @@ const data = {
 // walk your object/array:
 nxTraverse(data,(index, value, children)=>{
   console.log(children);
-}, null, { itemsKey: 'children'});
+}, { itemsKey: 'children'});
 ```
-
-## todos
-- [ ] bug: deep
