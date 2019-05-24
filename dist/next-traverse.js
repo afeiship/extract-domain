@@ -15,16 +15,14 @@
 
   nx.traverse = function(inTarget, inCallback, inContext, inOptions) {
     var options = nx.mix(null, DEFAULT_OPTIONS, inOptions);
-    var deep = 0;
     var walk = function(items) {
-      nx.mix(items, { deep: deep++ });
       items.forEach(function(item, index) {
-        inCallback.call(inContext, index, item, items);
+        inCallback.call(this, index, item, items);
         var children = item[options.itemsKey];
         if (children && children.length) {
           walk(children);
         }
-      });
+      }, inContext);
     };
 
     walk(isArray(inTarget) ? inTarget : [inTarget]);
