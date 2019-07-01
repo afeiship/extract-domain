@@ -16,7 +16,7 @@
   "license": "MIT",
   "devDependencies": {
     "del": "^2.2.1",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-bump": "^2.7.0",
     "gulp-concat": "^2.6.0",
     "gulp-header": "^2.0.7",
@@ -25,10 +25,10 @@
     "gulp-size": "^2.1.0",
     "gulp-uglify": "^2.1.2",
     "jest": "^23.6.0",
-    "yargs": "^4.7.1",
-    "uglify-save-license": "^0.4.1",
+    "next-nice-comments": "github:afeiship/next-nice-comments",
     "prettier": "^1.14.3",
-    "next-nice-comments": "github:afeiship/next-nice-comments"
+    "uglify-save-license": "^0.4.1",
+    "yargs": "^4.7.1"
   },
   "dependencies": {
     "next-js-core2": "github:afeiship/next-js-core2"

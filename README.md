@@ -29,3 +29,6 @@ nxTraverse(data,(index, value, children)=>{
   console.log(children);
 }, { itemsKey: 'children'});
 ```
+
+## resources
+- https://stackoverflow.com/questions/9385560/recursive-functions-in-javascript-and-depth-tracking
