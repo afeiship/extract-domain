@@ -6,9 +6,15 @@ describe('Basic test', () => {
     type: 'element',
     tagName: 'p',
     attributes: [],
-    expDeepth: 0,
+    __expDeepth: 0,
+    __expIndependent: false,
     children: [
-      { type: 'text', content: '\n    2019年版第五套人民币50元、', expDeepth: 1 },
+      {
+        type: 'text',
+        content: '\n    2019年版第五套人民币50元、',
+        __expDeepth: 1,
+        __expIndependent: true
+      },
       {
         type: 'element',
         tagName: 'span',
@@ -16,10 +22,11 @@ describe('Basic test', () => {
           { key: 'style', value: 'color:#0059FF' },
           { key: 'class', value: 'tss-color' }
         ],
-        children: [{ type: 'text', content: '20元、10', expDeepth: 2 }],
-        expDeepth: 1
+        children: [{ type: 'text', content: '20元、10', __expDeepth: 2, __expIndependent: true }],
+        __expDeepth: 1,
+        __expIndependent: false
       },
-      { type: 'text', content: '元、1', expDeepth: 1 },
+      { type: 'text', content: '元、1', __expDeepth: 1, __expIndependent: true },
       {
         type: 'element',
         tagName: 'span',
@@ -27,17 +34,29 @@ describe('Basic test', () => {
           { key: 'style', value: 'background-color:#87DBF7' },
           { key: 'class', value: 'tss-background-color' }
         ],
-        children: [{ type: 'text', content: '元纸币和1元', expDeepth: 2 }],
-        expDeepth: 1
+        children: [{ type: 'text', content: '元纸币和1元', __expDeepth: 2, __expIndependent: true }],
+        __expDeepth: 1,
+        __expIndependent: false
       }
     ]
   };
 
-  test('Travese item deepth equal expect', function() {
+  test('Travese item deepth equal expect:', function() {
     nx.traverse(
       data,
       function(index, value, target) {
-        expect(value.deepth).toBe(value.expDeepth);
+        expect(value.deepth).toBe(value.__expDeepth);
+      },
+      {
+        itemsKey: 'children'
+      }
+    );
+  });
+  test('Travese item deepth equal independent:', function() {
+    nx.traverse(
+      data,
+      function(index, value, target) {
+        expect(value.independent).toBe(value.__expIndependent);
       },
       {
         itemsKey: 'children'
