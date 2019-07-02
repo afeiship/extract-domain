@@ -16,12 +16,13 @@
   nx.traverse = function(inTarget, inCallback, inOptions) {
     var options = nx.mix(null, DEFAULT_OPTIONS, inOptions);
     var walk = function(items, deepth) {
-      items.deepth = typeof deepth === 'undefined' ? 0 : ++deepth;
+      var _deepth = typeof deepth === 'undefined' ? 0 : ++deepth;
       items.forEach(function(item, index) {
+        item.deepth = _deepth;
         inCallback.call(this, index, item, items);
         var children = item[options.itemsKey];
         if (children && children.length) {
-          walk(children, items.deepth);
+          walk(children, _deepth);
         }
       }, options.context);
     };
