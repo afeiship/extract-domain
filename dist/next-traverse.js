@@ -18,10 +18,11 @@
     var walk = function(items, deepth) {
       var _deepth = typeof deepth === 'undefined' ? 0 : ++deepth;
       items.forEach(function(item, index) {
-        item.deepth = _deepth;
-        inCallback.call(this, index, item, items);
         var children = item[options.itemsKey];
-        if (children && children.length) {
+        item.deepth = _deepth;
+        item.independent = !children || children.length === 0;
+        inCallback.call(this, index, item, items);
+        if (!item.independent) {
           walk(children, _deepth);
         }
       }, options.context);
