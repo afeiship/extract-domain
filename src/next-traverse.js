@@ -8,20 +8,23 @@
 
   nx.traverse = function(inTarget, inCallback, inOptions) {
     var options = nx.mix(null, DEFAULT_OPTIONS, inOptions);
-    var walk = function(items, deepth) {
+    var optKey = options.itemsKey;
+    var placeholder = {};
+    nx.set(placeholder, optKey, []);
+    var walk = function(items, deepth, parent) {
       var _deepth = typeof deepth === 'undefined' ? 0 : ++deepth;
       items.forEach(function(item, index) {
-        var children = item[options.itemsKey];
+        var children = item[optKey];
         item.deepth = _deepth;
         item.independent = !children || children.length === 0;
-        inCallback.call(this, index, item, items);
+        inCallback.call(this, index, item, parent);
         if (!item.independent) {
-          walk(children, _deepth);
+          walk(children, _deepth, item);
         }
       }, options.context);
     };
 
-    walk(isArray(inTarget) ? inTarget : [inTarget]);
+    walk(isArray(inTarget) ? inTarget : [inTarget], undefined, placeholder);
   };
 
   if (typeof module !== 'undefined' && module.exports) {

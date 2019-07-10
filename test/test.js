@@ -34,7 +34,9 @@ describe('Basic test', () => {
           { key: 'style', value: 'background-color:#87DBF7' },
           { key: 'class', value: 'tss-background-color' }
         ],
-        children: [{ type: 'text', content: '元纸币和1元', __expDeepth: 2, __expIndependent: true }],
+        children: [
+          { type: 'text', content: '元纸币和1元', __expDeepth: 2, __expIndependent: true }
+        ],
         __expDeepth: 1,
         __expIndependent: false
       }
