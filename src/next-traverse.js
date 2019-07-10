@@ -12,7 +12,7 @@
     var walk = function(items, deepth, parent) {
       var _deepth = typeof deepth === 'undefined' ? 0 : ++deepth;
       items.forEach(function(item, index) {
-        var children = item[optKey];
+        var children = typeof optKey === 'string' ? nx.get(item, optKey) : optKey(item);
         item.deepth = _deepth;
         item.independent = !children || children.length === 0;
         inCallback.call(this, index, item, parent);

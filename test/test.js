@@ -65,4 +65,19 @@ describe('Basic test', () => {
       }
     );
   });
+
+  test('Travese item itemsKey is funtion:', function() {
+    nx.traverse(
+      data,
+      function(index, value, target) {
+        expect(value.deepth).toBe(value.__expDeepth);
+        expect(value.independent).toBe(value.__expIndependent);
+      },
+      {
+        itemsKey: function(item) {
+          return item.children;
+        }
+      }
+    );
+  });
 });
