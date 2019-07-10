@@ -16,8 +16,6 @@
   nx.traverse = function(inTarget, inCallback, inOptions) {
     var options = nx.mix(null, DEFAULT_OPTIONS, inOptions);
     var optKey = options.itemsKey;
-    var placeholder = {};
-    nx.set(placeholder, optKey, []);
     var walk = function(items, deepth, parent) {
       var _deepth = typeof deepth === 'undefined' ? 0 : ++deepth;
       items.forEach(function(item, index) {
@@ -31,7 +29,7 @@
       }, options.context);
     };
 
-    walk(isArray(inTarget) ? inTarget : [inTarget], undefined, placeholder);
+    walk(isArray(inTarget) ? inTarget : [inTarget], undefined, null);
   };
 
   if (typeof module !== 'undefined' && module.exports) {
