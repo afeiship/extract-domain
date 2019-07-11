@@ -18,15 +18,18 @@
     var optKey = options.itemsKey;
     var walk = function(items, deepth, parent) {
       var _deepth = typeof deepth === 'undefined' ? 0 : ++deepth;
-      items.forEach(function(item, index) {
-        var children = typeof optKey === 'string' ? nx.get(item, optKey) : optKey(item);
-        item.deepth = _deepth;
-        item.independent = !children || children.length === 0;
-        inCallback.call(this, index, item, parent);
-        if (!item.independent) {
-          walk(children, _deepth, item);
-        }
-      }, options.context);
+      nx.forEach(
+        items,
+        function(item, index) {
+          var children = typeof optKey === 'string' ? nx.get(item, optKey) : optKey(item);
+          item.deepth = _deepth;
+          item.independent = !children || children.length === 0;
+          var res = inCallback.call(this, index, item, parent);
+          if (res === nx.BREAKER) return nx.BREAKER;
+          !item.independent && walk(children, _deepth, item);
+        },
+        options.context
+      );
     };
 
     walk(isArray(inTarget) ? inTarget : [inTarget], undefined, null);
