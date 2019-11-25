@@ -1,5 +1,5 @@
 {
-  "name": "next-traverse",
+  "name": "@feizheng/next-traverse",
   "version": "1.0.0",
   "description": "Traverse object which has items key.",
   "homepage": "https://github.com/afeiship/next-traverse",
@@ -10,27 +10,32 @@
   "scripts": {
     "build": "gulp",
     "test": "jest",
-    "version": "gulp bump"
+    "start": "node ./express.js"
   },
   "main": "dist/next-traverse.js",
   "license": "MIT",
   "devDependencies": {
+    "@feizheng/next-nice-comments": "^1.0.0",
+    "@feizheng/rake-git": "^1.2.0",
     "del": "^2.2.1",
     "gulp": "^4.0.2",
-    "gulp-bump": "^2.7.0",
-    "gulp-concat": "^2.6.0",
+    "gulp-debug": "^4.0.0",
     "gulp-header": "^2.0.7",
+    "gulp-ignore": "^2.0.2",
     "gulp-load-plugins": "^1.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-size": "^2.1.0",
+    "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^2.1.2",
-    "jest": "^23.6.0",
-    "next-nice-comments": "github:afeiship/next-nice-comments",
+    "jest": "^24.9.0",
     "prettier": "^1.14.3",
     "uglify-save-license": "^0.4.1",
     "yargs": "^4.7.1"
   },
   "dependencies": {
-    "next-js-core2": "github:afeiship/next-js-core2"
+    "@feizheng/next-js-core2": "^2.0.2"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   }
 }

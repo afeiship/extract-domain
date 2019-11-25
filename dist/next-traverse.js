@@ -1,13 +1,15 @@
 /*!
- * name: next-traverse
- * link: https://github.com/afeiship/next-traverse
+ * name: @feizheng/next-traverse
+ * url: https://github.com/afeiship/next-traverse
  * version: 1.0.0
+ * date: 2019-11-25T16:24:14.056Z
  * license: MIT
  */
 
 (function() {
   var global = global || this || window || Function('return this')();
-  var nx = global.nx || require('next-js-core2');
+  var nx = global.nx || require('@feizheng/next-js-core2');
+
   var DEFAULT_OPTIONS = { itemsKey: 'items', context: null };
   var isArray = function(target) {
     return target instanceof Array;
@@ -39,3 +41,5 @@
     module.exports = nx.traverse;
   }
 })();
+
+//# sourceMappingURL=next-traverse.js.map

@@ -1,14 +1,14 @@
 # next-traverse
 > Traverse object which has items key.
 
-## install:
+## installation
 ```bash
-npm install -S afeiship/next-traverse --registry=https://registry.npm.taobao.org
+npm install -S @feizheng/next-traverse
 ```
 
 ## usage:
 ```js
-import nxTraverse from 'next-traverse';
+import '@feizheng/next-traverse';
 
 const data = {
   tagName:'div',
@@ -25,7 +25,7 @@ const data = {
 };
 
 // walk your object/array:
-nxTraverse(data,(index, value, children)=>{
+nx.traverse(data,(index, value, children)=>{
   console.log(children);
 }, { itemsKey: 'children'});
 ```
