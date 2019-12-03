@@ -32,3 +32,7 @@ nx.traverse(data,(index, value, children)=>{
 
 ## resources
 - https://stackoverflow.com/questions/9385560/recursive-functions-in-javascript-and-depth-tracking
+
+## todos
+- [ ] itemsKey should be functional
+- [ ] traverse should not change the data
