@@ -36,3 +36,4 @@ nx.traverse(data,(index, value, children)=>{
 ## todos
 - [ ] itemsKey should be functional
 - [ ] traverse should not change the data
+- [ ] pass ({ item,index, ...props }) to callback should be better
