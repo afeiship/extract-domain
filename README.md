@@ -34,6 +34,6 @@ nx.traverse(data,(index, value, children)=>{
 - https://stackoverflow.com/questions/9385560/recursive-functions-in-javascript-and-depth-tracking
 
 ## todos
-- [ ] itemsKey should be functional
-- [ ] traverse should not change the data
-- [ ] pass ({ item,index, ...props }) to callback should be better
+- [ ] `itemsKey` should be functional
+- [ ] `traverse` should not change the data
+- [ ] pass ({ item,index, ...props }) to `callback` should be better
