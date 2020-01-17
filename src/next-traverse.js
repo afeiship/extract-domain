@@ -6,17 +6,17 @@
   nx.traverse = function(inTarget, inCallback, inOptions) {
     var options = nx.mix(null, DEFAULT_OPTIONS, inOptions);
     var optKey = options.itemsKey;
-    var walk = function(items, deepth, parent) {
-      var _deepth = typeof deepth === 'undefined' ? 0 : ++deepth;
+    var walk = function(items, depth, parent) {
+      var _depth = typeof depth === 'undefined' ? 0 : ++depth;
       nx.forEach(
         items,
         function(item, index) {
           var children = typeof optKey === 'string' ? nx.get(item, optKey) : optKey(item);
-          item.deepth = _deepth;
+          item.depth = _depth;
           item.independent = !children || children.length === 0;
           var res = inCallback.call(this, index, item, parent);
           if (res === nx.BREAKER) return nx.BREAKER;
-          !item.independent && walk(children, _deepth, item);
+          !item.independent && walk(children, _depth, item);
         },
         options.context
       );

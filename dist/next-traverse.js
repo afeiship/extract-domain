@@ -2,7 +2,7 @@
  * name: @feizheng/next-traverse
  * url: https://github.com/afeiship/next-traverse
  * version: 1.0.1
- * date: 2020-01-17T04:04:03.183Z
+ * date: 2020-01-17T05:24:55.242Z
  * license: MIT
  */
 
@@ -14,17 +14,17 @@
   nx.traverse = function(inTarget, inCallback, inOptions) {
     var options = nx.mix(null, DEFAULT_OPTIONS, inOptions);
     var optKey = options.itemsKey;
-    var walk = function(items, deepth, parent) {
-      var _deepth = typeof deepth === 'undefined' ? 0 : ++deepth;
+    var walk = function(items, depth, parent) {
+      var _depth = typeof depth === 'undefined' ? 0 : ++depth;
       nx.forEach(
         items,
         function(item, index) {
           var children = typeof optKey === 'string' ? nx.get(item, optKey) : optKey(item);
-          item.deepth = _deepth;
+          item.depth = _depth;
           item.independent = !children || children.length === 0;
           var res = inCallback.call(this, index, item, parent);
           if (res === nx.BREAKER) return nx.BREAKER;
-          !item.independent && walk(children, _deepth, item);
+          !item.independent && walk(children, _depth, item);
         },
         options.context
       );
