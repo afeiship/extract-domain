@@ -1,11 +1,7 @@
 (function() {
   var global = global || this || window || Function('return this')();
   var nx = global.nx || require('@feizheng/next-js-core2');
-
   var DEFAULT_OPTIONS = { itemsKey: 'items', context: null };
-  var isArray = function(target) {
-    return target instanceof Array;
-  };
 
   nx.traverse = function(inTarget, inCallback, inOptions) {
     var options = nx.mix(null, DEFAULT_OPTIONS, inOptions);
@@ -26,7 +22,7 @@
       );
     };
 
-    walk(isArray(inTarget) ? inTarget : [inTarget], undefined, null);
+    walk(Array.isArray(inTarget) ? inTarget : [inTarget], undefined, null);
   };
 
   if (typeof module !== 'undefined' && module.exports) {
