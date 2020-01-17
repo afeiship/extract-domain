@@ -6,13 +6,13 @@ describe('Basic test', () => {
     type: 'element',
     tagName: 'p',
     attributes: [],
-    __expDeepth: 0,
+    __expdepth: 0,
     __expIndependent: false,
     children: [
       {
         type: 'text',
         content: '\n    2019年版第五套人民币50元、',
-        __expDeepth: 1,
+        __expdepth: 1,
         __expIndependent: true
       },
       {
@@ -22,11 +22,11 @@ describe('Basic test', () => {
           { key: 'style', value: 'color:#0059FF' },
           { key: 'class', value: 'tss-color' }
         ],
-        children: [{ type: 'text', content: '20元、10', __expDeepth: 2, __expIndependent: true }],
-        __expDeepth: 1,
+        children: [{ type: 'text', content: '20元、10', __expdepth: 2, __expIndependent: true }],
+        __expdepth: 1,
         __expIndependent: false
       },
-      { type: 'text', content: '元、1', __expDeepth: 1, __expIndependent: true },
+      { type: 'text', content: '元、1', __expdepth: 1, __expIndependent: true },
       {
         type: 'element',
         tagName: 'span',
@@ -35,26 +35,26 @@ describe('Basic test', () => {
           { key: 'class', value: 'tss-background-color' }
         ],
         children: [
-          { type: 'text', content: '元纸币和1元', __expDeepth: 2, __expIndependent: true }
+          { type: 'text', content: '元纸币和1元', __expdepth: 2, __expIndependent: true }
         ],
-        __expDeepth: 1,
+        __expdepth: 1,
         __expIndependent: false
       }
     ]
   };
 
-  test('Travese item deepth equal expect:', function() {
+  test('Travese item depth equal expect:', function() {
     nx.traverse(
       data,
       function(index, value, target) {
-        expect(value.deepth).toBe(value.__expDeepth);
+        expect(value.depth).toBe(value.__expdepth);
       },
       {
         itemsKey: 'children'
       }
     );
   });
-  test('Travese item deepth equal independent:', function() {
+  test('Travese item depth equal independent:', function() {
     nx.traverse(
       data,
       function(index, value, target) {
@@ -70,7 +70,7 @@ describe('Basic test', () => {
     nx.traverse(
       data,
       function(index, value, target) {
-        expect(value.deepth).toBe(value.__expDeepth);
+        expect(value.depth).toBe(value.__expdepth);
         expect(value.independent).toBe(value.__expIndependent);
       },
       {

@@ -1,8 +1,8 @@
 /*!
  * name: @feizheng/next-traverse
  * url: https://github.com/afeiship/next-traverse
- * version: 1.0.1
- * date: 2020-01-17T05:24:55.242Z
+ * version: 2.0.0
+ * date: 2020-01-17T05:25:40.951Z
  * license: MIT
  */
 
