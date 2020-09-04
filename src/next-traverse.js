@@ -1,7 +1,7 @@
 (function () {
   var global = global || this || window || Function('return this')();
   var nx = global.nx || require('@feizheng/next-js-core2');
-  var DEFAULT_OPTIONS = { itemsKey: 'items', context: null, inject: false };
+  var DEFAULT_OPTIONS = { itemsKey: 'children', context: null, inject: false };
   var UNDEFINED = 'undefined';
   var STRING = 'string';
 

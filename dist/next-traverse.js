@@ -2,15 +2,15 @@
  * name: @feizheng/next-traverse
  * description: Traverse object which has items key.
  * homepage: https://github.com/afeiship/next-traverse
- * version: 2.1.0
- * date: 2020-08-26T09:27:25.553Z
+ * version: 2.1.1
+ * date: 2020-09-04T08:07:38.454Z
  * license: MIT
  */
 
 (function () {
   var global = global || this || window || Function('return this')();
   var nx = global.nx || require('@feizheng/next-js-core2');
-  var DEFAULT_OPTIONS = { itemsKey: 'items', context: null, inject: false };
+  var DEFAULT_OPTIONS = { itemsKey: 'children', context: null, inject: false };
   var UNDEFINED = 'undefined';
   var STRING = 'string';
 
