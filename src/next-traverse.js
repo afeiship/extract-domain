@@ -11,7 +11,8 @@
     var walk = function (items, depth, parent) {
       var depth = typeof depth === UNDEFINED ? 0 : ++depth;
       nx.forEach(items, function (item, index) {
-        var children = typeof optKey === STRING ? nx.get(item, optKey) : optKey(item);
+        var children =
+          typeof optKey === STRING ? nx.get(item, optKey) : optKey(index, item, parent);
         var independent = !children || children.length === 0;
         options.inject && nx.mix(item, { depth: depth, independent: independent });
         var res = inCallback.call(options.context, index, item, parent);

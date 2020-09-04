@@ -2,8 +2,8 @@
  * name: @feizheng/next-traverse
  * description: Traverse object which has items key.
  * homepage: https://github.com/afeiship/next-traverse
- * version: 2.1.2
- * date: 2020-09-04T08:13:37.272Z
+ * version: 2.1.3
+ * date: 2020-09-04T08:18:38.551Z
  * license: MIT
  */
 
@@ -20,7 +20,8 @@
     var walk = function (items, depth, parent) {
       var depth = typeof depth === UNDEFINED ? 0 : ++depth;
       nx.forEach(items, function (item, index) {
-        var children = typeof optKey === STRING ? nx.get(item, optKey) : optKey(item);
+        var children =
+          typeof optKey === STRING ? nx.get(item, optKey) : optKey(index, item, parent);
         var independent = !children || children.length === 0;
         options.inject && nx.mix(item, { depth: depth, independent: independent });
         var res = inCallback.call(options.context, index, item, parent);

@@ -75,7 +75,7 @@ describe('Basic test', () => {
       },
       {
         inject: true,
-        itemsKey: function (item) {
+        itemsKey: function (idx, item) {
           return item.children;
         }
       }
