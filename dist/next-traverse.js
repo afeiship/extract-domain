@@ -2,8 +2,8 @@
  * name: @feizheng/next-traverse
  * description: Traverse object which has items key.
  * homepage: https://github.com/afeiship/next-traverse
- * version: 2.1.1
- * date: 2020-09-04T08:07:38.454Z
+ * version: 2.1.2
+ * date: 2020-09-04T08:13:37.272Z
  * license: MIT
  */
 
@@ -24,7 +24,7 @@
         var independent = !children || children.length === 0;
         options.inject && nx.mix(item, { depth: depth, independent: independent });
         var res = inCallback.call(options.context, index, item, parent);
-        if (res === nx.BREAKER) return nx.BREAKER;
+        if (res === nx.BREAKER) return res;
         !independent && walk(children, depth, item);
       });
     };

@@ -15,7 +15,7 @@
         var independent = !children || children.length === 0;
         options.inject && nx.mix(item, { depth: depth, independent: independent });
         var res = inCallback.call(options.context, index, item, parent);
-        if (res === nx.BREAKER) return nx.BREAKER;
+        if (res === nx.BREAKER) return res;
         !independent && walk(children, depth, item);
       });
     };
