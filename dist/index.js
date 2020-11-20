@@ -1,6 +1,15 @@
+/*!
+ * name: @jswork/next-traverse
+ * description: Traverse object which has items key.
+ * homepage: https://github.com/afeiship/next-traverse
+ * version: 1.0.0
+ * date: 2020-11-20 13:04:02
+ * license: MIT
+ */
+
 (function () {
   var global = global || this || window || Function('return this')();
-  var nx = global.nx || require('@feizheng/next-js-core2');
+  var nx = global.nx || require('@jswork/next');
   var DEFAULT_OPTIONS = { itemsKey: 'children', context: null, inject: false };
   var UNDEFINED = 'undefined';
   var STRING = 'string';
