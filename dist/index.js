@@ -3,7 +3,7 @@
  * description: Traverse object which has items key.
  * homepage: https://github.com/afeiship/next-traverse
  * version: 1.0.0
- * date: 2020-11-20 13:04:02
+ * date: 2020-11-20 13:05:40
  * license: MIT
  */
 
