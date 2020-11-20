@@ -13,10 +13,35 @@ npm install -S @jswork/next-traverse
 
 ## usage
 ```js
-import '@jswork/next-traverse';
+import '@feizheng/next-traverse';
 
-//DOCS here!
+const data = {
+  tagName:'div',
+  children:[
+    {
+      tagName:'p',
+      content:'Content1'
+    },
+    {
+      tagName:'p',
+      content:'Content2'
+    }
+  ]
+};
+
+// walk your object/array:
+nx.traverse(data,(index, value, children)=>{
+  console.log(children);
+}, { itemsKey: 'children'});
 ```
+
+## options
+| name     | type            | default | description                                           |
+| -------- | --------------- | ------- | ----------------------------------------------------- |
+| itemsKey | string/function | 'items' | The target children key.                              |
+| context  | object          | null    | The loop context.                                     |
+| inject   | boolean         | false   | If inject `independent` and `depth` to the tree item. |
+
 
 ## license
 Code released under [the MIT license](https://github.com/afeiship/next-traverse/blob/master/LICENSE.txt).
