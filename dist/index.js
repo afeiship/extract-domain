@@ -2,8 +2,8 @@
  * name: @jswork/next-traverse
  * description: Traverse object which has items key.
  * homepage: https://github.com/afeiship/next-traverse
- * version: 1.0.0
- * date: 2020-11-20 13:05:40
+ * version: 1.0.1
+ * date: 2020-11-20 13:07:31
  * license: MIT
  */
 
