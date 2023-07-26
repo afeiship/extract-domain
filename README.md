@@ -15,7 +15,8 @@ npm install @jswork/extract-domain
 ```js
 import extractDomain from '@jswork/extract-domain';
 
-// usage goes here.
+const res = extractDomain('https://www.example.com/page');
+// www.example.com
 ```
 
 ## license
