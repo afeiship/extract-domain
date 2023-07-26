@@ -1,6 +1,6 @@
 {
   "name": "@jswork/extract-domain",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Extracts domain from URL.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -51,5 +51,10 @@
       ],
       "@babel/preset-typescript"
     ]
-  }
+  },
+  "keywords": [
+    "domain",
+    "extract",
+    "host"
+  ]
 }
