@@ -1,5 +1,5 @@
-# next-traverse
-> Traverse object which has items key.
+# extract-domain
+> Extracts domain from URL.
 
 [![version][version-image]][version-url]
 [![license][license-image]][license-url]
@@ -7,53 +7,28 @@
 [![download][download-image]][download-url]
 
 ## installation
-```bash
-npm install -S @jswork/next-traverse
+```shell
+npm install @jswork/extract-domain
 ```
 
 ## usage
 ```js
-import '@feizheng/next-traverse';
+import extractDomain from '@jswork/extract-domain';
 
-const data = {
-  tagName:'div',
-  children:[
-    {
-      tagName:'p',
-      content:'Content1'
-    },
-    {
-      tagName:'p',
-      content:'Content2'
-    }
-  ]
-};
-
-// walk your object/array:
-nx.traverse(data,(index, value, children)=>{
-  console.log(children);
-}, { itemsKey: 'children'});
+// usage goes here.
 ```
 
-## options
-| name     | type            | default | description                                           |
-| -------- | --------------- | ------- | ----------------------------------------------------- |
-| itemsKey | string/function | 'items' | The target children key.                              |
-| context  | object          | null    | The loop context.                                     |
-| inject   | boolean         | false   | If inject `independent` and `depth` to the tree item. |
-
-
 ## license
-Code released under [the MIT license](https://github.com/afeiship/next-traverse/blob/master/LICENSE.txt).
+Code released under [the MIT license](https://github.com/afeiship/extract-domain/blob/master/LICENSE.txt).
 
-[version-image]: https://img.shields.io/npm/v/@jswork/next-traverse
-[version-url]: https://npmjs.org/package/@jswork/next-traverse
+[version-image]: https://img.shields.io/npm/v/@jswork/extract-domain
+[version-url]: https://npmjs.org/package/@jswork/extract-domain
 
-[license-image]: https://img.shields.io/npm/l/@jswork/next-traverse
-[license-url]: https://github.com/afeiship/next-traverse/blob/master/LICENSE.txt
+[license-image]: https://img.shields.io/npm/l/@jswork/extract-domain
+[license-url]: https://github.com/afeiship/extract-domain/blob/master/LICENSE.txt
 
-[size-image]: https://img.shields.io/bundlephobia/minzip/@jswork/next-traverse
-[size-url]: https://github.com/afeiship/next-traverse/blob/master/dist/next-traverse.min.js
+[size-image]: https://img.shields.io/bundlephobia/minzip/@jswork/extract-domain
+[size-url]: https://github.com/afeiship/extract-domain/blob/master/dist/extract-domain.min.js
 
-[download-image]: https://img.shields.io/npm/dm/@jswork/next-traverse
-[download-url]: https://www.npmjs.com/package/@jswork/next-traverse
+[download-image]: https://img.shields.io/npm/dm/@jswork/extract-domain
+[download-url]: https://www.npmjs.com/package/@jswork/extract-domain
