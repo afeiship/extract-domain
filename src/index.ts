@@ -1,9 +1,15 @@
 declare var wx: any;
 
 const URL_RE = /^(?:https?:\/\/)?([^/]+)(?:\/|$)/;
+const supportURL = typeof URL !== 'function';
 
-function extractDomain(url) {
-  const match = url.match(URL_RE);
+function extractDomain(inUrl) {
+  if (supportURL) {
+    const url = new URL(inUrl);
+    return url.hostname;
+  }
+
+  const match = inUrl.match(URL_RE);
   if (match && match[1]) {
     return match[1];
   } else {
