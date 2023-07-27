@@ -58,6 +58,6 @@
     "host"
   ],
   "dependencies": {
-    "@jswork/is-valid-url": "^1.0.1"
+    "@jswork/is-valid-url": "^1.0.2"
   }
 }
