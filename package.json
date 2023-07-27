@@ -56,5 +56,8 @@
     "domain",
     "extract",
     "host"
-  ]
+  ],
+  "dependencies": {
+    "@jswork/is-valid-url": "^1.0.1"
+  }
 }

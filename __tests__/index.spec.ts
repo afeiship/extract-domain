@@ -1,6 +1,15 @@
 import extractDomain from '../src';
 
 describe('api.basic', () => {
+  test('url is invalid should get null', () => {
+    const url = 'http://';
+    const url2 = undefined;
+    const res = extractDomain(url);
+    const res2 = extractDomain(url2);
+    expect(res).toBe(null);
+    expect(res2).toBe(null);
+  });
+
   test('normail single value case', () => {
     const url1 = 'https://www.example.com/page';
     const url2 = 'http://www.example.com/page';

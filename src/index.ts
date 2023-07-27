@@ -1,20 +1,24 @@
+import isValidURL from '@jswork/is-valid-url';
+
 declare var wx: any;
 
 const URL_RE = /^(?:https?:\/\/)?([^/]+)(?:\/|$)/;
 const supportURL = typeof URL !== 'function';
 
 function extractDomain(inUrl) {
+  if (!inUrl) return null;
+  if (!isValidURL(inUrl)) return null;
+
   if (supportURL) {
-    const url = new URL(inUrl);
-    return url.hostname;
+    try {
+      return new URL(inUrl)?.hostname;
+    } catch (_) {
+      return null;
+    }
   }
 
   const match = inUrl.match(URL_RE);
-  if (match && match[1]) {
-    return match[1];
-  } else {
-    return null;
-  }
+  return match && match[1] ? match[1] : null;
 }
 
 // for commonjs es5 require
