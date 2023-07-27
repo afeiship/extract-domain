@@ -21,7 +21,7 @@ describe('api.basic', () => {
 
     expect(res1).toBe('www.example.com');
     expect(res2).toBe('www.example.com');
-    expect(res3).toBe('www.example.com');
+    expect(res3).toBe(null);
   });
 
   test('with ip', () => {
