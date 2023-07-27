@@ -1,6 +1,6 @@
 {
   "name": "@jswork/extract-domain",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Extracts domain from URL.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
